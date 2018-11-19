@@ -33,6 +33,9 @@ if (isset($_POST['src']) && is_string($_POST['src']) && isset($_POST['filter']) 
 			$new_id = $result['pic_id'] + 1;
 			$link = "resources/userpics/img_". $new_id .".png";
 
+			if (!file_exists("resources/userpics"))
+				mkdir("resources/userpics");
+
 			if (imagepng($img, $link)) {
 
 	
