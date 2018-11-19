@@ -1,0 +1,44 @@
+<?PHP
+
+$DB_DSN = "mysql:host=127.0.0.1;dbname=camagru";
+$DB_USER = "root";
+$DB_PASSWORD = "root42";
+
+$conn = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$sql = "CREATE TABLE IF NOT EXISTS users (
+	user_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(50) UNIQUE NOT NULL,
+	passwd VARCHAR(500) NOT NULL,
+	email VARCHAR(100) UNIQUE NOT NULL,
+	code VARCHAR(32) NOT NULL,
+	active TINYINT(1) NOT NULL DEFAULT 0,
+	notif TINYINT(1) NOT NULL DEFAULT 1
+	)";
+$conn->exec($sql);
+
+$sql = "CREATE TABLE IF NOT EXISTS pictures (
+	pic_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	user_id INT UNSIGNED NOT NULL,
+	link VARCHAR(255) NOT NULL,
+	date TIMESTAMP
+	)";
+$conn->exec($sql);
+
+$sql = "CREATE TABLE IF NOT EXISTS comments (
+	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	pic_id INT UNSIGNED NOT NULL,
+	user_id INT UNSIGNED NOT NULL,
+	text TEXT(1000) NOT NULL
+	)";
+$conn->exec($sql);
+
+$sql = "CREATE TABLE IF NOT EXISTS likes (
+	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	user_id INT UNSIGNED NOT NULL,
+	pic_id INT UNSIGNED NOT NULL
+	)";
+$conn->exec($sql);
+
+?>

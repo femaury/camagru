@@ -1,0 +1,95 @@
+.galleryContainer {
+	height: calc(100vh - 130px);
+}
+
+.photoContainer {
+	width: 500px;
+	margin: 50px auto;
+	padding: 10px;
+	background: white;
+	box-shadow: 0 0 10px #333333;
+}
+
+.galleryPhotos {
+	width: 500px;
+}
+
+.photoTitle {
+	display: flex;
+	justify-content: space-between;
+}
+
+.photoComments {
+	max-height: 200px;
+	overflow-y: scroll;
+	margin-bottom: 5px;
+}
+.userName {
+	font-weight: bold;
+	margin-top: 8px;
+}
+
+.likesContainer {
+	display: flex;
+	margin-top: auto;
+}
+
+.likes {
+	margin: 8px 5px 0 0;
+}
+
+.heart {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.addComment input {
+	width: 500px;
+	padding: 8px 10px;
+	vertical-align: text-bottom;
+}
+
+.comment {
+	display: flex;
+	color: #333333;
+	font-size: 13px;
+	margin: 8px 0;
+
+}
+
+.commUser {
+	font-weight: bold;
+	margin-right: 5px;
+}
+
+.commText {
+	word-wrap: break-word;
+	overflow: hidden;
+}
+
+.pageLinks {
+	margin: 40px auto 120px;
+	display: flex;
+	justify-content: center;
+}
+
+.links {
+	margin: 0 5px;
+	background: white;
+	color: black;
+	cursor: pointer;
+	font-weight: bold;
+	border: none;
+}
+
+.links:hover {
+	background: black;
+	color: white;
+}
+
+.currentLink {
+	background: black;
+	color: white;
+	pointer-events: none;
+}

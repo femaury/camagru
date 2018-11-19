@@ -1,0 +1,151 @@
+.center {
+	text-align: center;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.current {
+	background: #333333;
+}
+
+#main {
+	width: 70%;
+	min-width: 600px;
+}
+
+#side {
+	width: 30%;
+	min-width: 300px;
+	box-shadow: 0 2px 10px #333333;
+	padding: 10px 0;
+	min-height: calc(100vh - 130px);
+}
+
+#wrapper {
+	display: flex;
+}
+
+#sideTitle {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	margin: 2em 0;
+}
+
+#myPhotos {
+	width: 210px;
+	margin: 0 auto;
+}
+
+.userPhotos {
+	width: 200px;
+	padding: 5px;
+	background: white;
+	box-shadow: 0 2px 10px #333333;
+	margin-bottom: 10px;
+
+}
+
+#camera {
+	position: relative;
+	margin: 2em auto 0;
+	width: 500px;
+	height: 400px;
+	padding: 0.5em;
+	background: white;
+	box-shadow: 0 2px 10px #333333;
+}
+
+#fileInput {
+	position: absolute;
+	left: 10;
+	bottom: 10;
+}
+
+#fileRemove {
+	display: none;
+	position: absolute;
+	bottom: 10;
+	right: 10;
+}
+
+#takePhoto {
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin: 15px;
+	margin-bottom: 100px;
+	padding: 5px 10px;
+	font-size: 20px;
+	border: none;
+	border-radius: 10px;
+}
+
+#takePhoto:hover {
+	cursor: pointer;
+	background-color: red;
+}
+
+#canvas {
+	display: none;
+}
+
+.photoContainer {
+	width: 500px;
+	min-height: 375px;
+	margin: -20px auto 0;
+	background: #258C0E;
+	padding: 0.5em;
+	box-shadow: 0 2px 10px #333333;
+}
+
+#savePhoto {
+	display: none;
+	background-color: black;
+	color: white;
+	margin: 15px auto 100px;
+	float: none;
+	padding: 5px 10px;
+	font-size: 20px;
+	border: none;
+	border-radius: 10px;
+}
+
+#savePhoto:hover {
+	cursor: pointer;
+	background-color: #258C0E;
+}
+
+#filters {
+	margin-top: 0.5em;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.filterImg {
+	width: 150px;
+}
+
+.selection {
+	margin: 10px;
+	padding: 0.4em;
+	background: white;
+	box-shadow: 0 2px 10px #333333;
+}
+
+.selection:hover {
+	cursor: pointer;
+}
+
+#filterText {
+	margin: 2em 0 0;
+	text-align: center;
+	font-size: 24px;
+}
+
+#topImg {
+	z-index: 1;
+}
